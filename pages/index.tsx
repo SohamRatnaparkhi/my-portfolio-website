@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import MainContainer from "../containers/MainContainer";
 // import Cursor from "../utils/Cursor/Cursor";
-import Cursor from "../utils/Cursor";
+import Cursor from "../utils/Cursor/Cursor";
 // import SplashContainer from "../containers/SplashContainer";
 
 const Home: NextPage = () => {

@@ -1,17 +1,24 @@
 import React, { createContext, useState } from "react";
+
 export const MouseContext = createContext({
   cursorType: "",
-  cursorChangeHandler: (_cursorType: any ) => {},
+  currentTheme: "",
+  cursorChangeHandler: (_cursorType : string, _currentTheme: string) => {},
 });
-const MouseContextProvider = (props: { children: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }) => {
+
+const MouseContextProvider = (props : any) => {
   const [cursorType, setCursorType] = useState("");
-const cursorChangeHandler = (cursorType: React.SetStateAction<string>) => {
+  const [currentTheme, setCurrentTheme] = useState("");
+  const cursorChangeHandler = (cursorType : string, currentTheme: string) => {
     setCursorType(cursorType);
+    setCurrentTheme(currentTheme);
   };
-return (
+
+  return (
     <MouseContext.Provider
       value={{
         cursorType: cursorType,
+        currentTheme: currentTheme,
         cursorChangeHandler: cursorChangeHandler,
       }}
     >
@@ -19,4 +26,5 @@ return (
     </MouseContext.Provider>
   );
 };
+
 export default MouseContextProvider;

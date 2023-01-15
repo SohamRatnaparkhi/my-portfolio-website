@@ -78,12 +78,12 @@
    transition-property: opacity;
 }
 
-html,body {
+/* html,body {
   cursor: none
 }
 html *,body * {
   cursor: none;
-}
+} */
 .c--hidden {
    opacity: 0;
 }
@@ -92,3 +92,75 @@ html *,body * {
    transform: translate(-50%, -50%) scale(1.25);
 }
 
+/* --------- */
+
+.ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  /* background-color: rgba(31, 30, 30, 0.4); */
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  -webkit-transition-duration: 100ms;
+  transition-duration: 100ms;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  will-change: width, height, transform, border;
+  z-index: 999;
+  pointer-events: none;
+}
+.dot {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  /* background-color: black; */
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  pointer-events: none;
+}
+.ring.hovered {
+  width: 80px;
+  height: 80px;
+  border-width: 3px;
+  background-color:transparent;
+}
+.dot.hovered {
+  display: none;
+}
+
+.ring.light{
+    background-color: black;
+}
+.ring.dark{
+    background-color: white;
+}
+
+.dot.light {
+    background-color: white;
+}
+.dot.dark {
+    background-color: black;
+}
+
+.ring.hovered.light{
+    border-color: #121212;
+    background-color: transparent;
+}
+
+.ring.hovered.dark{
+    border-color: whitesmoke;
+    background-color: transparent;
+}
+
+.ring.disabled {
+  display: none;
+}
+
+.dot.light.disabled {
+  display: none;
+}

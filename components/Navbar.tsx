@@ -6,6 +6,7 @@ import { MENU } from "../constants/web.data";
 import { useState, useEffect } from "react";
 import { themeChange } from "theme-change";
 import { Sacramento } from "@next/font/google";
+import { MouseContext } from "../context/mouse-context";
 
 const sacra = Sacramento({
   weight: "400",
@@ -14,6 +15,8 @@ const sacra = Sacramento({
 });
 
 const Navbar = () => {
+  const { cursorChangeHandler } = React.useContext(MouseContext);
+
   const [scrollState, setScrollState] = useState(false);
 
   let listener: any = null;
@@ -55,22 +58,28 @@ const Navbar = () => {
       } `}
     >
       <div
-        className={`order-2 justify-center sm:order-1 my-name px-3 text-extrabold text-2xl ${sacra.className}`}
+        className={`order-2 justify-center sm:order-1 my-name px-3  ${sacra.className}`}
+        onMouseEnter={() => cursorChangeHandler("hovered", theme)}
+        onMouseLeave={() => cursorChangeHandler("", theme)}
       >
-        <h1 className="">{SHORT_NAME}</h1>
+        <h1 className="text-extrabold text-2xl hover:text-3xl hover:text-primary-focus-content px-2">
+          {SHORT_NAME}
+        </h1>
       </div>
 
       <div className="navbar-options order-1 sm:order-2">
         {MENU.map((item, i) => {
           return (
             <Link
+              onMouseEnter={() => cursorChangeHandler("hovered", theme)}
+              onMouseLeave={() => cursorChangeHandler("", theme)}
               onClick={() => {
                 setSelectedId(i);
               }}
-              className={`hidden hover:bg-base-300 sm:inline-block px-2 md:px-4 ${
+              className={`hidden text-md hover:bg-base hover:text-2xl sm:inline-block mx-4 px-2 md:mx-8 ${
                 selectedId === i
                   ? "text-blue-500 text-bold text-lg font-sans"
-                  : "text-gray-500"
+                  : "text-primary-content"
               }`}
               href={item.link}
               key={item.key}
@@ -133,6 +142,8 @@ const Navbar = () => {
           step="2"
           data-choose-theme="true"
           data-set-theme={theme}
+          onMouseEnter={() => cursorChangeHandler("disabled", theme)}
+          onMouseLeave={() => cursorChangeHandler("", theme)}
           // data-act-class="ACTIVECLASS"
           onChange={(e) => {
             setTheme(THEMES[parseInt(e.target.value) / sliderMaxSize]);
@@ -150,7 +161,9 @@ const Navbar = () => {
                 className="hidden sm:flex flex-col px-2 items-center"
                 key={item.key}
               >
-                <span>{item.emoji}</span>
+                <span className="text-xl hover:cursor-pointer">
+                  {item.title === theme ? item.emoji : null}
+                </span>
               </div>
             );
           })}
@@ -159,7 +172,6 @@ const Navbar = () => {
             data-toggle-theme="dark,light"
             data-act-class="ACTIVECLASS"
             onClick={() => {
-              
               setTheme(theme === "light" ? "dark" : "light");
             }}
             data-set-theme={theme}

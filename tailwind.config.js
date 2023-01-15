@@ -39,6 +39,7 @@ module.exports = {
           "base-200": "#daede5",
           "base-300": "#d4e9e2",
           "primary-focus": "mediumblue",
+          "primary-content": "black",
         },
       },
       "light",
