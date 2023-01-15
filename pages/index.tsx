@@ -2,6 +2,8 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import MainContainer from "../containers/MainContainer";
+// import Cursor from "../utils/Cursor/Cursor";
+import Cursor from "../utils/Cursor";
 // import SplashContainer from "../containers/SplashContainer";
 
 const Home: NextPage = () => {
@@ -20,7 +22,9 @@ const Home: NextPage = () => {
       />
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Soham Ratnaparkhi" />
-
+      <div className="hidden sm:inline-block">
+        <Cursor />
+      </div>
       <MainContainer />
     </div>
   );

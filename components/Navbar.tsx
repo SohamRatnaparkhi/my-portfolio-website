@@ -55,9 +55,9 @@ const Navbar = () => {
       } `}
     >
       <div
-        className={`order-2 justify-center sm:order-1 my-name px-3 text-bold text-2xl ${sacra.className}`}
+        className={`order-2 justify-center sm:order-1 my-name px-3 text-extrabold text-2xl ${sacra.className}`}
       >
-        <h1>{SHORT_NAME}</h1>
+        <h1 className="">{SHORT_NAME}</h1>
       </div>
 
       <div className="navbar-options order-1 sm:order-2">
@@ -69,7 +69,7 @@ const Navbar = () => {
               }}
               className={`hidden hover:bg-base-300 sm:inline-block px-2 md:px-4 ${
                 selectedId === i
-                  ? "text-blue-500 text-bold text-lg"
+                  ? "text-blue-500 text-bold text-lg font-sans"
                   : "text-gray-500"
               }`}
               href={item.link}
@@ -128,7 +128,7 @@ const Navbar = () => {
           type="range"
           min="0"
           max={sliderMaxSize}
-          defaultValue={2}
+          defaultValue={0}
           className="range hidden sm:block"
           step="2"
           data-choose-theme="true"
@@ -159,8 +159,10 @@ const Navbar = () => {
             data-toggle-theme="dark,light"
             data-act-class="ACTIVECLASS"
             onClick={() => {
+              
               setTheme(theme === "light" ? "dark" : "light");
             }}
+            data-set-theme={theme}
           >
             {theme === "light" ? "🌙" : "☀️"}
           </button>
