@@ -7,6 +7,8 @@ const SplashContainer = () => {
     <div>
       <Navbar />
       <SplashContent />
+      {/* <SplashContent />
+      <SplashContent /> */}
     </div>
   )
 }

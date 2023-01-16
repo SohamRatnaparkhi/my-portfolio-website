@@ -1,16 +1,16 @@
 export const NAVBAR_TITLES = [
     "Home",
-    "About",
     "Projects",
     "Skills",
     "Resume",
-    "Contact"
+    "Contact",
+    "About",
 ]
 export const MENU = [
     {key: 1, title: NAVBAR_TITLES[0], link: "/"},
-    {key: 2, title: NAVBAR_TITLES[1], link: "#about"},
-    {key: 3, title: NAVBAR_TITLES[2], link: "#projects"},
-    {key: 4, title: NAVBAR_TITLES[3], link: "#skills"},
+    {key: 2, title: NAVBAR_TITLES[1], link: "#projects"},
+    {key: 3, title: NAVBAR_TITLES[2], link: "#skills"},
+    {key: 4, title: NAVBAR_TITLES[3], link: "#Contact"},
     {key: 5, title: NAVBAR_TITLES[4], link: "#resume"},
 ]
 

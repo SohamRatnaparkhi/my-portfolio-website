@@ -23,7 +23,7 @@ const Navbar = () => {
   useEffect(() => {
     listener = document.addEventListener("scroll", () => {
       var scrolled: any = document.scrollingElement!.scrollTop;
-      if (scrolled >= 120) {
+      if (scrolled >= 60) {
         if (!scrollState) {
           setScrollState(true);
         }
@@ -53,7 +53,7 @@ const Navbar = () => {
     <div
       className={`flex flex-row justify-between w-full justify-between ${
         scrollState
-          ? `inset-x-0 top-0 z-50 w-full transition duration-300 ease-in-out border-b border-transparent bg-primary text-primary-content fixed navbar`
+          ? `inset-x-0 top-0 z-50 w-full transition duration-300 ease-in-out border-b border-transparent bg-accent text-accent-content text-primary-content fixed navbar`
           : `fixed inset-x-0 top-0 z-50 w-full transition duration-300 ease-in-out bg-transparent border-b border-transparent navbar`
       } `}
     >
@@ -76,9 +76,11 @@ const Navbar = () => {
               onClick={() => {
                 setSelectedId(i);
               }}
-              className={`hidden text-md hover:bg-base hover:text-2xl sm:inline-block mx-4 px-2 md:mx-8 ${
+              className={`hidden text-md hover:bg-base hover:text-2xl hover:underline sm:inline-block mx-4 px-2 md:mx-8 ${
                 selectedId === i
-                  ? "text-blue-500 text-bold text-lg font-sans"
+                  ? !scrollState
+                    ? "text-secondary text-bold text-xl font-sans "
+                    : "text-primary-focus text-bold text-xl font-sans "
                   : "text-primary-content"
               }`}
               href={item.link}
@@ -156,16 +158,16 @@ const Navbar = () => {
         </select> */}
         <div className="flex justify-between text-md px-2">
           {THEME_MENU.map((item) => {
-            return (
-              <div
-                className="hidden sm:flex flex-col px-2 items-center"
+            return item.title === theme ? (
+              <button
+                className="hidden btn btn-base sm:flex px-2 items-center"
                 key={item.key}
               >
                 <span className="text-xl hover:cursor-pointer">
                   {item.title === theme ? item.emoji : null}
                 </span>
-              </div>
-            );
+              </button>
+            ) : null;
           })}
           <button
             className="btn btn-base sm:hidden"
