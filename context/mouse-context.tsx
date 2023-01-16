@@ -11,7 +11,8 @@ const MouseContextProvider = (props : any) => {
   const [currentTheme, setCurrentTheme] = useState("");
   const cursorChangeHandler = (cursorType : string, currentTheme: string) => {
     setCursorType(cursorType);
-    setCurrentTheme(currentTheme);
+    if (currentTheme !== "")
+      setCurrentTheme(currentTheme);
   };
 
   return (
