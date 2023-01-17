@@ -1,20 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useEffect } from "react";
-import Router from "next/router";
 import MainContainer from "../containers/MainContainer";
-import { FIRST_SCREEN_TIMEOUT } from "../constants/web.data";
-import Cursor from "../utils/Cursor/Cursor";
 // import Cursor from "../utils/Cursor/Cursor";
+import Cursor from "../utils/Cursor/Cursor";
 // import SplashContainer from "../containers/SplashContainer";
 
-const Home: NextPage = () => {
-  // const delay = FIRST_SCREEN_TIMEOUT;
-  // useEffect( () => {
-  //   setTimeout(() => {
-  //     Router.push('/mainPage')
-  //   }, delay);
-  // }, [])
+const MainPage: NextPage = () => {
   return (
     <div className="">
       <Head>
@@ -30,12 +21,12 @@ const Home: NextPage = () => {
       />
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Soham Ratnaparkhi" />
-
-      <Cursor />
+      {/* <div className="hidden sm:inline-block"> */}
+        <Cursor />
+      {/* </div> */}
       <MainContainer />
-      {/* Splash Screen 3 js */}
     </div>
   );
 };
 
-export default Home;
+export default MainPage;

@@ -58,7 +58,7 @@
 .mountains {
   position: relative;
   /* margin-top: 100px; */
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   height: 100%;
   width: 100%;
 }
@@ -77,104 +77,117 @@
   position: fixed;
   transform: translate(-50%, -50%);
   transition: all 100ms ease;
-   transition-property: opacity;
+  transition-property: opacity;
 }
 
 /* ---- for mouse pointer --- */
 
-html,body {
-  cursor: none
+html,
+body {
+  cursor: none;
 }
-html *,body * {
+html *,
+body * {
   cursor: none;
 }
 .c--hidden {
-   opacity: 0;
+  opacity: 0;
 }
 
 .cursor--link-hovered {
-   transform: translate(-50%, -50%) scale(1.25);
+  transform: translate(-50%, -50%) scale(1.25);
 }
 
-.ring {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 40px;
-  height: 40px;
-  /* background-color: rgba(31, 30, 30, 0.4); */
-  border-radius: 100%;
-  transform: translate(-50%, -50%);
-  -webkit-transition-duration: 100ms;
-  transition-duration: 100ms;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-  will-change: width, height, transform, border;
-  z-index: 999;
-  pointer-events: none;
-}
-.dot {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 8px;
-  height: 8px;
-  /* background-color: grey; */
-  border-radius: 100%;
-  transform: translate(-50%, -50%);
-  z-index: 999;
-  pointer-events: none;
-}
-.ring.hovered {
-  width: 80px;
-  height: 80px;
-  border-width: 3px;
-  background-color:transparent;
-}
-/* .dot.hovered {
+@media only screen and (min-width: 600px) {
+  .ring {
+    /* cursor: pointer; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    /* background-color: rgba(31, 30, 30, 0.4); */
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    -webkit-transition-duration: 100ms;
+    transition-duration: 100ms;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    will-change: width, height, transform, border;
+    z-index: 999;
+    pointer-events: none;
+  }
+  .dot {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    /* background-color: grey; */
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    pointer-events: none;
+  }
+  .ring.hovered {
+    width: 80px;
+    height: 80px;
+    border-width: 3px;
+    background-color: transparent;
+  }
+  /* .dot.hovered {
   display: none;
 } */
+  .ring.default {
+    background-color: white;
+    /* border-color: rgb(119, 255, 203); */
+    border: 3px solid black;
+  }
 
-.ring.light{
+  .dot.default {
+    background-color: black;
+  }
+
+  .ring.light {
     background-color: white;
     border-color: black;
-    border: 2px solid black;
-}
-.ring.dark{
+    border: 3px solid black;
+  }
+  .ring.dark {
     background-color: black;
     border-color: white;
-    border: 2px solid white
-}
+    border: 2px solid white;
+  }
 
-.dot.light {
+  .dot.light {
     background-color: black;
-}
-.dot.dark {
+  }
+  .dot.dark {
     background-color: white;
-}
+  }
 
-.ring.hovered.light{
+  .ring.hovered.light {
     border-color: grey;
     background-color: transparent;
-}
+  }
 
-.ring.hovered.dark{
+  .ring.hovered.dark {
     border-color: whitesmoke;
     background-color: transparent;
-}
+  }
 
-.ring.disabled {
-  display: none;
-}
+  .ring.disabled {
+    display: none;
+  }
 
-.dot.light.disabled {
-  display: none;
-}
+  .dot.light.disabled {
+    display: none;
+  }
 
-.dot.hovered {
-  display: none;
+  .dot.hovered {
+    display: none;
+  }
 }
-
 /* ----- for scroll-bars ----- */
 :root {
   --primary: #1c6854;
@@ -193,7 +206,7 @@ html *,body * {
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 15px;
+  width: 8px;
 }
 
 *::-webkit-scrollbar-track {

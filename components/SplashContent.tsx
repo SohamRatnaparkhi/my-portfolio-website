@@ -4,6 +4,7 @@ import { Sacramento, Merienda } from "@next/font/google";
 import { NAME } from "../constants/data";
 // import { ReactComponent as HeroIllustration } from "/hero_illustration.svg";
 import { MouseContext } from "../context/mouse-context";
+import Link from "next/link";
 
 const sacra = Sacramento({
   weight: "400",
@@ -21,10 +22,10 @@ const SplashContent = () => {
   const { cursorChangeHandler } = React.useContext(MouseContext);
 
   return (
-    <div className="flex flex-col justify-between items-center w-full bg-base-200 min-h-screen body antialiased ">
+    <div className="flex flex-col justify-between items-center max-w-screen bg-base-200 min-h-screen body antialiased ">
       <div
         id="top"
-        className="container flex flex-col justify-between items-center w-screen bg-base-200 min-h-screen body antialiased"
+        className="container flex flex-col justify-between items-center max-w-screen bg-base-200 min-h-screen body antialiased"
       >
         <div className="flex flex-col items-center inline-block mt-12 pt-5">
           <Image
@@ -47,13 +48,15 @@ const SplashContent = () => {
           >
             a <u>pro</u>grammer !
           </h2>
-          <button
-            className="btn p-4 mt-12 text-center btn-success transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
-            onMouseEnter={() => cursorChangeHandler("hovered", '')}
-            onMouseLeave={() => cursorChangeHandler("", '')}
-          >
-            Know more!
-          </button>
+          <Link href="#knowmore">
+            <button
+              className="btn p-4 mt-12 text-center btn-success transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+              onMouseEnter={() => cursorChangeHandler("hovered", "")}
+              onMouseLeave={() => cursorChangeHandler("", "")}
+            >
+              Know more!
+            </button>{" "}
+          </Link>
         </div>
         <div>
           <Image

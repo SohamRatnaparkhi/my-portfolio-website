@@ -1,3 +1,5 @@
+export const FIRST_SCREEN_TIMEOUT = 3000;
+
 export const NAVBAR_TITLES = [
     "Home",
     "Projects",
@@ -20,5 +22,5 @@ export const THEMES = [
 ]
 export const THEME_MENU = [
     {key: 1, title: THEMES[0], emoji: "🌞"},
-    {key: 2, title: THEMES[1], emoji: "🌚"}
+    {key: 2, title: THEMES[1], emoji: "🌙"}
 ]

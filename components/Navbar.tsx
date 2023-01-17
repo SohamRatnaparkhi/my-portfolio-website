@@ -40,12 +40,18 @@ const Navbar = () => {
   }, [scrollState]);
 
   const [theme, setTheme] = useState("light");
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+  useEffect(() => {
+    document.querySelector("html")!.setAttribute("data-theme", theme);
+  }, [theme]);
   const themeSize = THEMES.length;
   const sliderMaxSize = (themeSize - 1) * 2;
-  useEffect(() => {
-    themeChange(false);
-    // 👆 false parameter is required for react project
-  }, []);
+  // useEffect(() => {
+  //   // themeChange(false);
+  //   // 👆 false parameter is required for react project
+  // }, []);
 
   const [selectedId, setSelectedId] = useState(0);
 
@@ -135,7 +141,7 @@ const Navbar = () => {
       </div>
 
       <div className="order-3 sm:order-3 py-3 theme-options flex flex-col w-20 px-3">
-        <input
+        {/* <input
           type="range"
           min="0"
           max={sliderMaxSize}
@@ -150,14 +156,9 @@ const Navbar = () => {
           onChange={(e) => {
             setTheme(THEMES[parseInt(e.target.value) / sliderMaxSize]);
           }}
-        />
-        {/* <select data-choose-theme>
-          <option value="light">Default</option>
-          <option value="dark">Dark</option>
-          <option value="pink">Pink</option>
-        </select> */}
+        /> */}
         <div className="flex justify-between text-md px-2">
-          {THEME_MENU.map((item) => {
+          {/* {THEME_MENU.map((item) => {
             return item.title === theme ? (
               <button
                 className="hidden btn btn-base sm:flex px-2 items-center"
@@ -168,17 +169,15 @@ const Navbar = () => {
                 </span>
               </button>
             ) : null;
-          })}
+          })} */}
+
           <button
-            className="btn btn-base sm:hidden"
-            data-toggle-theme="dark,light"
-            data-act-class="ACTIVECLASS"
-            onClick={() => {
-              setTheme(theme === "light" ? "dark" : "light");
-            }}
-            data-set-theme={theme}
+            className="btn btn-base" 
+            onClick={toggleTheme}
+            onMouseEnter={() => cursorChangeHandler("hovered", theme)}
+            onMouseLeave={() => cursorChangeHandler("", theme)}
           >
-            {theme === "light" ? "🌙" : "☀️"}
+            {theme !== THEME_MENU[0].title ? THEME_MENU[0].emoji : THEME_MENU[1].emoji}
           </button>
         </div>
       </div>
