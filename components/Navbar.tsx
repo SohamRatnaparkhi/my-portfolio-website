@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { SHORT_NAME } from "../constants/data";
+import { SHORT_NAME } from "../constants/personal.data";
 import { THEME_MENU, THEMES } from "../constants/web.data";
 import { MENU } from "../constants/web.data";
 import { useState, useEffect } from "react";
@@ -140,8 +140,8 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="order-3 sm:order-3 py-3 theme-options flex flex-col w-20 px-3">
-        {/* <input
+      {/* <div className="order-3 sm:order-3 py-3 theme-options flex flex-col w-20 px-3"> */}
+      {/* <input
           type="range"
           min="0"
           max={sliderMaxSize}
@@ -157,8 +157,8 @@ const Navbar = () => {
             setTheme(THEMES[parseInt(e.target.value) / sliderMaxSize]);
           }}
         /> */}
-        <div className="flex justify-between text-md px-2">
-          {/* {THEME_MENU.map((item) => {
+      {/* <div className="flex justify-between text-md px-2"> */}
+      {/* {THEME_MENU.map((item) => {
             return item.title === theme ? (
               <button
                 className="hidden btn btn-base sm:flex px-2 items-center"
@@ -171,16 +171,30 @@ const Navbar = () => {
             ) : null;
           })} */}
 
-          <button
-            className="btn btn-base" 
-            onClick={toggleTheme}
-            onMouseEnter={() => cursorChangeHandler("hovered", theme)}
-            onMouseLeave={() => cursorChangeHandler("", theme)}
-          >
-            {theme !== THEME_MENU[0].title ? THEME_MENU[0].emoji : THEME_MENU[1].emoji}
-          </button>
-        </div>
+      <button
+        className="btn order-3 btn-base inline-block sm:hidden"
+        onClick={toggleTheme}
+        onMouseEnter={() => cursorChangeHandler("disabled", theme)}
+        onMouseLeave={() => cursorChangeHandler("", theme)}
+      >
+        {theme == THEME_MENU[0].title
+          ? THEME_MENU[0].emoji
+          : THEME_MENU[1].emoji}
+      </button>
+      <div
+        className={`hidden sm:inline-block mr-6 order-3 ${
+          theme === "dark" && !scrollState ? "bg-base-100" : null
+        } rounded-full p-2`}
+        onClick={toggleTheme}
+        onMouseEnter={() => cursorChangeHandler("disabled", "")}
+        onMouseLeave={() => cursorChangeHandler("", theme)}
+      >
+        {theme == THEME_MENU[0].title
+          ? THEME_MENU[0].image
+          : THEME_MENU[1].image}
       </div>
+      {/* </div> */}
+      {/* </div> */}
     </div>
   );
 };

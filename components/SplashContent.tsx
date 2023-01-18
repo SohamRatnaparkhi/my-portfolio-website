@@ -1,10 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import { Sacramento, Merienda } from "@next/font/google";
-import { NAME } from "../constants/data";
-// import { ReactComponent as HeroIllustration } from "/hero_illustration.svg";
+import { NAME } from "../constants/personal.data";
+import { motion } from "framer-motion";
 import { MouseContext } from "../context/mouse-context";
 import Link from "next/link";
+import { splashScreenAnimation } from "../constants/web.data";
 
 const sacra = Sacramento({
   weight: "400",
@@ -21,6 +22,12 @@ const meri = Merienda({
 const SplashContent = () => {
   const { cursorChangeHandler } = React.useContext(MouseContext);
 
+  const variants = {
+    name: splashScreenAnimation(0.4),
+    intro: splashScreenAnimation(0.8),
+    btn: splashScreenAnimation(1.5),
+  }
+
   return (
     <div className="flex flex-col justify-between items-center max-w-screen bg-base-200 min-h-screen body antialiased ">
       <div
@@ -36,26 +43,39 @@ const SplashContent = () => {
             alt={"cloud image"}
           />
         </div>
-        {/* <Image src="/cloud.jpg" height={160} width={160} alt="" className="cloud1" /> */}
+
         <div className="introduction mb-10">
-          <h1
+          <motion.h1
             className={`text-6xl font-bold text-bold text-center text-accent-focus font-sacramento ${sacra.className}`}
+            variants={variants.name}
+            initial="hidden"
+            animate="visible"
           >
             I'm {NAME}
-          </h1>
-          <h2
+          </motion.h1>
+          <motion.h2
             className={`text-sm italic text-center text-accent ${meri.className}`}
+            initial="hidden"
+            animate="visible"
+            variants={variants.intro}
           >
             a <u>pro</u>grammer !
-          </h2>
+          </motion.h2>
           <Link href="#knowmore">
-            <button
-              className="btn p-4 mt-12 text-center btn-success transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
-              onMouseEnter={() => cursorChangeHandler("hovered", "")}
+            <motion.button
+              className="btn p-4 mt-12 text-center btn-success transition ease-in-out delay-150  duration-500"
+              initial="hidden"
+              animate="visible"
+              variants= {variants.btn}
+              onMouseEnter={() => cursorChangeHandler("disabled", "")}
               onMouseLeave={() => cursorChangeHandler("", "")}
+              whileHover={{ scale: 1.2 }}
+              onHoverStart={(e) => {}}
+              whileTap={{ scale: 1.5 }}
+              onHoverEnd={(e) => {}}
             >
               Know more!
-            </button>{" "}
+            </motion.button>{" "}
           </Link>
         </div>
         <div>

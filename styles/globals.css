@@ -177,16 +177,15 @@ body * {
   }
 
   .ring.disabled {
+    cursor: pointer;
     display: none;
   }
 
-  .dot.light.disabled {
-    display: none;
-  }
 
   .dot.hovered {
     display: none;
   }
+
 }
 /* ----- for scroll-bars ----- */
 :root {
@@ -216,6 +215,6 @@ body * {
 
 *::-webkit-scrollbar-thumb {
   background-color: var(--secondary);
-  border-radius: 14px;
+  border-radius: 8px;
   border: 3px solid var(--primary);
 }
