@@ -69,7 +69,7 @@ const KnowMore = () => {
           initial="offscreen"
           whileInView="onscreen"
           viewport={{ once: true, amount: 0.8 }}
-          className="my-about-section w-1/2 md:px-11 md:mx-12 text-justify text-lg md:text-xl"
+          className="my-about-section md:w-1/2 w-3/4 p-2 md:px-11 md:mx-12 text-justify text-lg md:text-xl"
         >
           {data}
         </motion.div>
