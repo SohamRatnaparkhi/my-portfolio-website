@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { KNOW_MORE } from "../constants/personal.data";
 import { motion, useAnimation, Variants } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Image from "next/image";
+import myImage from '../public/myself/srdp.png'
 
 const KnowMore = () => {
   const { title, data, photoWithBG } = KNOW_MORE;
@@ -56,12 +58,12 @@ const KnowMore = () => {
       </motion.h1>
       <div className="flex items-center flex-col md:flex-row ">
         <motion.div
-          className="my-photo w-1/2 justify-center p-4"
+          className="my-photo w-1/2 justify-center m-auto p-4"
           variants={photoAnimation}
           initial="hidden"
           whileInView="visible"
         >
-          {photoWithBG}
+          <Image className="mx-auto" src={myImage} alt='soham'/>
         </motion.div>
         <motion.div
           initial="offscreen"

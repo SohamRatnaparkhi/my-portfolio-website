@@ -36,7 +36,7 @@ const SplashContent = () => {
       >
         <div className="flex flex-col items-center inline-block mt-12 pt-5">
           <Image
-            className=""
+            className="animate-pulse"
             src={"/cloud2.jpg"}
             height={180}
             width={180}
