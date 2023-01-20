@@ -29,13 +29,12 @@ const KnowMore = () => {
     visible: { opacity: 1, scale: [2, 1], transition: { duration: 1 } },
     hidden: { opacity: 0, scale: 0 },
   };
-  const dataAmimation: Variants = {
+  const dataAnimation: Variants = {
     offscreen: {
       y: 300,
     },
     onscreen: {
       y: 50,
-      rotate: -10,
       transition: {
         type: "spring",
         bounce: 0.4,
@@ -47,7 +46,7 @@ const KnowMore = () => {
   return (
     <div
       id="knowmore"
-      className="mt-14 pb-2 bg-gradient-to-b from-bg-primary to-bg-secondary"
+      className="mt-14 pb-4 bg-gradient-to-b from-bg-primary to-bg-secondary"
     >
       <motion.h1
         className="my-8 text-4xl md:text-6xl font-bold text-center"
@@ -66,6 +65,7 @@ const KnowMore = () => {
           <Image className="mx-auto" src={myImage} alt='soham'/>
         </motion.div>
         <motion.div
+          variants={dataAnimation}
           initial="offscreen"
           whileInView="onscreen"
           viewport={{ once: true, amount: 0.8 }}

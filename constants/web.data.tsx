@@ -69,7 +69,7 @@ export const splashScreenAnimation = (delay: number) => {
         delay: delay,
       },
     },
-  };
+  }; 
   return variants;
 };
 

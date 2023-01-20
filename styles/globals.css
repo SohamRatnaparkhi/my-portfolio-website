@@ -151,7 +151,7 @@ body * {
   .ring.light {
     background-color: white;
     border-color: black;
-    border: 3px solid black;
+    border: 2px solid black;
   }
   .ring.dark {
     background-color: black;

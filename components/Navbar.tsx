@@ -18,18 +18,23 @@ const Navbar = () => {
   const { cursorChangeHandler } = React.useContext(MouseContext);
 
   const [scrollState, setScrollState] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState({x: 0, y:0});
 
   let listener: any = null;
   useEffect(() => {
     listener = document.addEventListener("scroll", () => {
-      var scrolled: any = document.scrollingElement!.scrollTop;
-      if (scrolled >= 60) {
+      var scrolledTop: any = document.scrollingElement!.scrollTop;
+      var scrolledLeft : any = document.scrollingElement!.scrollLeft;
+      setScrollPosition({x: scrolledLeft, y: scrolledTop});
+      console.log(scrolledTop);
+      if (scrolledTop >= 120) {
         if (!scrollState) {
           setScrollState(true);
         }
       } else {
         if (scrollState) {
           setScrollState(false);
+        
         }
       }
     });
@@ -59,7 +64,7 @@ const Navbar = () => {
     <div
       className={`flex flex-row justify-between w-full justify-between ${
         scrollState
-          ? `inset-x-0 top-0 z-50 w-full transition duration-300 ease-in-out border-b border-transparent bg-accent text-accent-content text-primary-content fixed navbar`
+          ? `inset-x-0 top-0 fixed z-50 w-full transition duration-300 ease-in-out border-b border-transparent bg-accent text-accent-content text-primary-content  navbar`
           : `fixed inset-x-0 top-0 z-50 w-full transition duration-300 ease-in-out bg-transparent border-b border-transparent navbar`
       } `}
     >
@@ -81,7 +86,8 @@ const Navbar = () => {
               onMouseLeave={() => cursorChangeHandler("", theme)}
               onClick={() => {
                 setSelectedId(i);
-              }}
+                document.querySelector("html")!.scroll(scrollPosition.x, scrollPosition.y - 200);
+               }}
               className={`hidden text-md hover:bg-base hover:text-2xl hover:underline sm:inline-block mx-4 px-2 md:mx-8 ${
                 selectedId === i
                   ? !scrollState
@@ -184,7 +190,7 @@ const Navbar = () => {
       <div
         className={`hidden sm:inline-block mr-6 order-3 ${
           theme === "dark" && !scrollState ? "bg-base-100" : null
-        } rounded-full p-2`}
+        } rounded-full`}
         onClick={toggleTheme}
         onMouseEnter={() => cursorChangeHandler("disabled", "")}
         onMouseLeave={() => cursorChangeHandler("", theme)}

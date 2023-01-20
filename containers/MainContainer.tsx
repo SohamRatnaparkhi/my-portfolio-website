@@ -4,7 +4,7 @@ import SplashContainer from './SplashContainer'
 
 const MainContainer = () => {
   return (
-    <div className='overflow-x-hidden overflow-y-auto'>
+    <div className='overflow-x-hidden overflow-y-auto flex flex-col'>
       <SplashContainer />
       <ShowOffContainer />
     </div>
