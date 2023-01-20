@@ -15,10 +15,10 @@ const Projects = () => {
         {title}
       </h1>
       <div className="flex items-center flex-col md:flex-row ">
-        <div className="my-about-section md:w-1/2 w-3/4 p-2 md:px-11 md:mx-12 text-justify text-lg md:text-xl">
+        <div className="my-about-section md:w-1/2 w-3/4 p-2 md:px-11 md:mx-12 text-justify text-lg md:text-xl order-2 md:order-1">
           {description}
         </div>
-        <div className="my-photo w-1/2 justify-center m-auto p-4">
+        <div className="my-photo w-1/2 justify-center m-auto p-4 order-1 md:order-2">
           <Image
             className="mx-auto"
             src={"/project.svg"}

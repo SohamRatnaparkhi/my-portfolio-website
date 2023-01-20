@@ -29,7 +29,7 @@ export const KNOW_MORE = {
 export const PROJECTS = {
   title: "Projects",
   description:
-    "Lets take a look at some of my projects. My projects make use of the latest technologies and all of them are hosted on GitHub. I have majorly worked upon projects MERN stack, as well as Deep learning projects. My projects are open-source and you can contribute to them if you want to. ",
+    "Lets take a look at some of my projects. My projects make use of the latest technologies and all of them are hosted on GitHub. I have majorly worked upon projects MERN stack, Web3, and Deep learning projects. All of my projects are open-source and you can contribute to them if you want to. ",
   projectImage: "/projects/project.png",
   data: [
     {
@@ -41,6 +41,9 @@ export const PROJECTS = {
         "A decentralized blogging platform where users can interact with each other and share their thoughts and ideas. It is built on top of the Ethereum blockchain",
       techStack: [
         "Next.JS",
+        "MongoDB",
+        "Node.JS",
+        "Express.JS",
         "Solidity",
         "Web3.js",
         "Ethereum",
