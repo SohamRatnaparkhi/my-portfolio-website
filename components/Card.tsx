@@ -18,7 +18,7 @@ const Card = (props: {
     <div
       onMouseEnter={() => cursorChangeHandler("disabled", "")}
       onMouseLeave={() => cursorChangeHandler("", "")}
-      className="card w-96 bg-base-100 shadow-xl overflow-y-auto m-8 "
+      className="card w-96 bg-base-100 shadow-xl overflow-y-auto m-8"
     >
       <div
         className="h-[48rem] flex flex-col justify-between"

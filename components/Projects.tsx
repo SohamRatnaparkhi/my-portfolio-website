@@ -7,7 +7,7 @@ import Image from "next/image";
 const Projects = () => {
   const { title, description, data, conclusion } = PROJECTS;
   return (
-    <div id="projects" className="mt-14 pb-2">
+    <div id="projects" className="mt-14 pb-2 overflow-x-hidden">
       <h1 className="my-8 text-4xl md:text-6xl font-bold text-center">
         {title}
       </h1>
