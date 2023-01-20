@@ -19,9 +19,10 @@ module.exports = {
           neutral: "#3d4451",
           "base-100": "#f5f5f5",
           "base-200": "#daede5",
-          "base-300": "#d4e9e2",
+          "base-300": "#FBFAF5",
           "primary-focus": "mediumblue",
           "primary-content": "black",
+          "card-color":'#FBFAF5'
         },
       },
       "light",

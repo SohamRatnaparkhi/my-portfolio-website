@@ -36,7 +36,7 @@ export const PROJECTS = {
       key: 1,
       name: "Blog-X",
       repo: "https://github.com/Blog-X/blog_x",
-      hostedLink: "",
+      hostedLink: "https://blog-x-omega.vercel.app/",
       description:
         "A decentralized blogging platform where users can interact with each other and share their thoughts and ideas. It is built on top of the Ethereum blockchain",
       techStack: [
@@ -70,9 +70,8 @@ export const PROJECTS = {
         "Bootstrap",
       ],
       images: [
-        "/projects/blogx/blogx1.png",
-        "/projects/blogx/blogx2.png",
-        "/projects/blogx/blogx3.png",
+        "/projects/btd/btd1.jpg",
+        "/projects/btd/btd2.jpg",
       ],
     },
     {
@@ -91,9 +90,7 @@ export const PROJECTS = {
         "TailwindCSS",
       ],
       images: [
-        "/projects/blogx/blogx1.png",
-        "/projects/blogx/blogx2.png",
-        "/projects/blogx/blogx3.png",
+        "/projects/market/market1.jpg",
       ],
     },
     {
@@ -105,7 +102,16 @@ export const PROJECTS = {
         "Transliterate is an all-in-one web application which can transliterate text, audio and even video between 106 available languages. It is various google APIs to perform the task.",
       techStack: ["Flask", "Google APIs", "HTML5", "CSS3", "Bootstrap"],
       images: ["/projects/transliterate/tr1.png", "/projects/blogx/blogx3.png",],
-    },
+    }, 
+    {
+        key: 5,
+        name: 'Voice Assistant',
+        repo: 'https://github.com/SohamRatnaparkhi/Voice-Assistant',
+        hostedLink: 'https://github.com/SohamRatnaparkhi/Voice-Assistant/releases/download/v1.0.0/VoiceAssistant.exe',
+        description: 'A CLI Voice Assistant tool which can perform various common tasks like opening websites, playing music, sending emails, etc. The USP of this project is that it can be used as a book reader as it can convert the text in .pdf and .docs files to audio and play it page by page.',
+        techStack: ["Python", "gTTS"],
+        images:["/projects/va/va1.png", "/experience.svg"]
+    }
   ],
   conclusion: {
     title: "Want to see more?",

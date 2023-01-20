@@ -26,7 +26,6 @@ const Navbar = () => {
       var scrolledTop: any = document.scrollingElement!.scrollTop;
       var scrolledLeft : any = document.scrollingElement!.scrollLeft;
       setScrollPosition({x: scrolledLeft, y: scrolledTop});
-      console.log(scrolledTop);
       if (scrolledTop >= 120) {
         if (!scrollState) {
           setScrollState(true);

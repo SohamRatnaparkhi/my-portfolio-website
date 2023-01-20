@@ -1,10 +1,10 @@
 import Link from "next/link";
-import React, { Key, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { MouseContext } from "../context/mouse-context";
 
 const Card = (props: {
-  key: Key;
+  key: number;
   name: string;
   repo: string;
   hostedLink: string;
@@ -14,14 +14,16 @@ const Card = (props: {
 }) => {
   const { key, name, repo, hostedLink, description, techStack, images } = props;
   const { cursorChangeHandler } = React.useContext(MouseContext);
+  const [selectedImg, setSelectedImg] = useState<number>(0);
+
   return (
     <div
       onMouseEnter={() => cursorChangeHandler("disabled", "")}
       onMouseLeave={() => cursorChangeHandler("", "")}
-      className="card w-96 bg-base-100 shadow-xl overflow-y-auto m-8"
+      className={`card w-96 bg-base-300 shadow-xl overflow-y-auto m-8`}
     >
       <div
-        className="h-[48rem] flex flex-col justify-between"
+        className="h-[41.5rem] flex flex-col justify-between"
         id="carouselExampleIndicators"
       >
         <div>
@@ -33,8 +35,8 @@ const Card = (props: {
               return (
                 <div
                   key={index}
-                  id={`${name}${index}`}
-                  className="carousel-item w-full"
+                  id={`${name}${index + 1}`}
+                  className="carousel-item h-64 w-full"
                 >
                   <Image
                     src={image}
@@ -52,10 +54,11 @@ const Card = (props: {
               return (
                 <a
                   key={index}
-                  href={`#${name}${index}`}
-                  className="btn button btn-xs"
+                  href={`#${name}${index + 1}`}
+                  className={`button btn btn-xs ${index + 1 === selectedImg ? 'bg-primary' : ''}`}
+                  onClick={() => {setSelectedImg(index + 1)}}
                 >
-                  {index}
+                  {index + 1}
                 </a>
               );
             })}
@@ -68,20 +71,20 @@ const Card = (props: {
             {hostedLink && (
               <div className="badge badge-secondary">
                 {" "}
-                <Link href={`${hostedLink}`}> Live Link </Link>{" "}
+                <Link href={`${hostedLink}`}> Try now! </Link>{" "}
               </div>
             )}
           </h2>
-          <p> {description} </p>
+          <p className="text-justify"> {description} </p>
         </div>
         <div className=" flex flex-row flex-wrap justify-center ">
           {techStack.map((item) => {
-            return <div className="badge m-1 badge-outline">{item}</div>;
+            return <div className="badge mx-1.5 my-1 badge-outline">{item}</div>;
           })}
         </div>
-        <hr />
-        <div>
-          <Link className="flex flex-row justify-end mx-4 my-8" href={repo}>
+        <hr className="my-2" />
+        <div >
+          <Link  className="flex flex-row justify-end mx-4 my-2" href={repo}>
             {/* generate a github icon svg */}
             <Image src={"/github.png"} height={30} width={30} alt={""} />
           </Link>
