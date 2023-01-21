@@ -11,9 +11,9 @@ const Projects = () => {
   const { cursorChangeHandler } = React.useContext(MouseContext);
 
   return (
-    <div id="projects" className="mt-14 pb-2 overflow-x-hidden">
+    <div id="projects" className="pb-2 mt-10 overflow-x-hidden">
       <Wave
-        fill="#1277b0"
+        fill="#0066ff"
         paused={false}
         options={{
           height: 30,
@@ -22,6 +22,13 @@ const Projects = () => {
           points: 4,
         }}
       />
+        <Image
+          src={"/projects/wave-cropped.svg"}
+          width={1920}
+          height={200}
+          alt="soham"
+          className="overflow-hidden wave"
+        />
       <h1 className="my-8 text-4xl md:text-6xl font-bold text-center">
         {title}
       </h1>
@@ -29,7 +36,7 @@ const Projects = () => {
         <div className="my-about-section md:w-1/2 w-3/4 p-2 md:px-11 md:mx-12 text-justify text-lg md:text-xl order-2 md:order-1">
           {description}
         </div>
-        <div className="my-photo w-1/2 justify-center m-auto p-4 order-1 md:order-2">
+        <div className="projects-photo w-1/2 justify-center m-auto p-4 order-1 md:order-2">
           <Image
             className="mx-auto"
             src={"/project.svg"}
@@ -60,16 +67,6 @@ const Projects = () => {
           </Link>
         </p>
       </div>
-      <Wave
-        fill="#1277b0"
-        paused={false}
-        options={{
-          height: 30,
-          amplitude: 40,
-          speed: 0.2,
-          points: 4,
-        }}
-      />
     </div>
   );
 };

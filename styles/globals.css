@@ -58,7 +58,6 @@
 .mountains {
   position: relative;
   /* margin-top: 100px; */
-  margin-bottom: 5px;
   height: 100%;
   width: 100%;
 }
@@ -217,4 +216,20 @@ body * {
   background-color: var(--secondary);
   border-radius: 8px;
   border: 3px solid var(--primary);
+}
+
+.rotate {
+  font-size: 30px;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+
+.wave {
+  position: relative;
+  margin-top: -10px;
+}
+
+.skills{
+  height: 150%;
 }

@@ -3,7 +3,8 @@ import { KNOW_MORE } from "../constants/personal.data";
 import { motion, useAnimation, Variants } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
-import myImage from '../public/myself/srdp.png'
+import myImage from "../public/myself/srdp.png";
+import Wave from "react-wavify";
 
 const KnowMore = () => {
   const { title, data, photoWithBG } = KNOW_MORE;
@@ -46,15 +47,27 @@ const KnowMore = () => {
   return (
     <div
       id="knowmore"
-      className="mt-14 pb-4 bg-gradient-to-b from-bg-primary to-bg-secondary"
+      className="bg-gradient-to-b from-bg-primary to-bg-secondary"
     >
-      <motion.h1
+      {" "}
+      <Wave
+        fill="#0066ff"
+        paused={false}
+        className="rotate mt-0.5"
+        options={{
+          height: 10,
+          amplitude: 15,
+          speed: 0.15,
+          points: 4,
+        }}
+      />
+`      <motion.h1
         className="my-8 text-4xl md:text-6xl font-bold text-center"
         initial={titleAnimation.hidden}
         whileInView={titleAnimation.show}
       >
         {title}
-      </motion.h1>
+      </motion.h1>`
       <div className="flex items-center flex-col md:flex-row ">
         <motion.div
           className="my-photo w-1/2 justify-center m-auto p-4"
@@ -62,7 +75,7 @@ const KnowMore = () => {
           initial="hidden"
           whileInView="visible"
         >
-          <Image className="mx-auto" src={myImage} alt='soham'/>
+          <Image className="mx-auto" src={myImage} alt="soham" />
         </motion.div>
         <motion.div
           variants={dataAnimation}

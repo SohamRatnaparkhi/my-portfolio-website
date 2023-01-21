@@ -132,9 +132,6 @@ const SplashContent = () => {
           />
         </div>
       </div>
-      <div>
-        <hr />
-      </div>
     </div>
   );
 };

@@ -44,7 +44,7 @@ export const PROJECTS = {
         "MongoDB",
         "Node.JS",
         "Express.JS",
-        "Solidity",
+        "c",
         "Web3.js",
         "Ethereum",
         "Push protocols",
@@ -125,5 +125,82 @@ export const PROJECTS = {
 
 export const SKILLS = {
   title: "Skills",
-  data: []
+  skills: [
+    {
+      'name': 'HTML',
+      'image': '/skills/icons/html.svg'
+    },
+    {
+      'name': 'CSS',
+      'image': '/skills/icons/css3.svg'
+    },
+    {
+      'name': 'Bootstrap',
+      'image': '/skills/icons/bootstrap.svg'
+    },
+    {
+      'name': 'TailwindCSS',
+      'image': '/skills/icons/tailwind.svg'
+    },
+    {
+      'name': 'JavaScript',
+      'image': '/skills/icons/js.svg'
+    },
+    {
+      'name': 'TypeScript',
+      'image': '/skills/icons/ts.svg'
+    },
+    {
+      'name': 'React.JS',
+      'image': '/skills/icons/reactjs.svg'
+    },
+    {
+      'name': 'Node.JS',
+      'image': '/skills/icons/nodejs.svg'
+    },
+    {
+      'name': 'Express.JS',
+      'image': '/skills/icons/express.svg'
+    },
+    {
+      'name': 'MongoDB',
+      'image': '/skills/icons/mongodb.svg'
+    },
+    {
+      'name': 'Python',
+      'image': '/skills/icons/python.svg'
+    },
+    {
+      'name': 'Django',
+      'image': '/skills/icons/django.svg'
+    },
+    {
+      'name': 'Tensorflow',
+      'image': '/skills/icons/tensorflow.svg'
+    },
+    {
+      'name': 'Next.JS',
+      'image': '/skills/icons/nextjs.svg'
+    },
+    {
+      'name': 'Git',
+      'image': '/skills/icons/git.svg'
+    },
+    {
+      'name': 'Docker',
+      'image': '/skills/icons/docker.svg'
+    },
+    {
+      'name': 'Java',
+      'image': '/skills/icons/java.svg'
+    },
+    {
+      'name': 'C++',
+      'image': '/skills/icons/cplusplus.svg'
+    },
+    {
+      'name': 'C',
+      'image': '/skills/icons/c.svg'
+    },
+  ]
 }
