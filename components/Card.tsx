@@ -20,10 +20,10 @@ const Card = (props: {
     <div
       onMouseEnter={() => cursorChangeHandler("disabled", "")}
       onMouseLeave={() => cursorChangeHandler("", "")}
-      className={`card w-96 bg-base-300 shadow-xl overflow-y-auto m-8`}
+      className={`card w-3/4 sm:w-96 bg-base-300 shadow-xl overflow-y-auto m-8`}
     >
       <div
-        className="h-[41.5rem] flex flex-col justify-between"
+        className="h-full sm:h-[41.5rem] flex flex-col justify-between"
         id="carouselExampleIndicators"
       >
         <div>
