@@ -6,7 +6,6 @@ const ShowOffContainer = () => {
   return (
     <div>
       <KnowMore />
-      <hr />
       <Projects />
     </div>
   )

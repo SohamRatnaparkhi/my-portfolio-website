@@ -4,6 +4,7 @@ import { PROJECTS } from "../constants/personal.data";
 import Card from "./Card";
 import Image from "next/image";
 import { MouseContext } from "../context/mouse-context";
+import Wave from "react-wavify";
 
 const Projects = () => {
   const { title, description, data, conclusion } = PROJECTS;
@@ -11,6 +12,16 @@ const Projects = () => {
 
   return (
     <div id="projects" className="mt-14 pb-2 overflow-x-hidden">
+      <Wave
+        fill="#1277b0"
+        paused={false}
+        options={{
+          height: 30,
+          amplitude: 40,
+          speed: 0.2,
+          points: 4,
+        }}
+      />
       <h1 className="my-8 text-4xl md:text-6xl font-bold text-center">
         {title}
       </h1>
@@ -49,6 +60,16 @@ const Projects = () => {
           </Link>
         </p>
       </div>
+      <Wave
+        fill="#1277b0"
+        paused={false}
+        options={{
+          height: 30,
+          amplitude: 40,
+          speed: 0.2,
+          points: 4,
+        }}
+      />
     </div>
   );
 };

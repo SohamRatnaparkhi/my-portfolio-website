@@ -14,7 +14,7 @@ export const INTRO_TEXT = "a programmer!";
 export const KNOW_MORE = {
   title: "Know more about me!",
   data:
-    "I'm a software developer who loves to build things! I regularly keep my self updated to the latest technologies and other techy stuff arising.  I am a full-stack web developer (MERN stack). Along with web development, I have worked on various projects related to Deep Learning and Machine Learning. I love contributing to open-source projects. I am adept at solving crunch problems based on data structure and algorithms.",
+    "I'm a software developer who loves to build things! I regularly keep my self updated to the latest technologies and other techy stuff arising.  I am a full-stack responsive web developer (MERN stack). Along with web development, I have worked on various projects related to Deep Learning and Machine Learning. I love contributing to open-source projects. I am adept at solving crunch problems based on data structure and algorithms.",
   photoWithBG: (
     <Image
       src={photoWithBG}
@@ -29,7 +29,7 @@ export const KNOW_MORE = {
 export const PROJECTS = {
   title: "Projects",
   description:
-    "Lets take a look at some of my projects. My projects make use of the latest technologies and all of them are hosted on GitHub. I have majorly worked upon projects MERN stack, Web3, and Deep learning projects. All of my projects are open-source and you can contribute to them if you want to. ",
+    "Lets take a look at some of my projects. My projects make use of the latest technologies and all of them are hosted on GitHub. I have majorly worked upon  MERN stack, Web3, and Deep learning projects. All of my projects are open-source and you can contribute to them if you want to. ",
   projectImage: "/projects/project.png",
   data: [
     {
@@ -122,3 +122,8 @@ export const PROJECTS = {
     link: "https://github.com/SohamRatnaparkhi",
   },
 };
+
+export const SKILLS = {
+  title: "Skills",
+  data: []
+}
