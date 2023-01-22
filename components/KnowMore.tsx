@@ -56,8 +56,8 @@ const KnowMore = () => {
         className="rotate mt-0.5"
         options={{
           height: 10,
-          amplitude: 15,
-          speed: 0.15,
+          amplitude: 20,
+          speed: 0.20,
           points: 4,
         }}
       />

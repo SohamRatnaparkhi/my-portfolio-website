@@ -44,7 +44,6 @@ export const PROJECTS = {
         "MongoDB",
         "Node.JS",
         "Express.JS",
-        "c",
         "Web3.js",
         "Ethereum",
         "Push protocols",
@@ -72,10 +71,7 @@ export const PROJECTS = {
         "CSS",
         "Bootstrap",
       ],
-      images: [
-        "/projects/btd/btd1.jpg",
-        "/projects/btd/btd2.jpg",
-      ],
+      images: ["/projects/btd/btd1.jpg", "/projects/btd/btd2.jpg"],
     },
     {
       key: 3,
@@ -92,9 +88,7 @@ export const PROJECTS = {
         "Redux",
         "TailwindCSS",
       ],
-      images: [
-        "/projects/market/market1.jpg",
-      ],
+      images: ["/projects/market/market1.jpg"],
     },
     {
       key: 4,
@@ -104,17 +98,19 @@ export const PROJECTS = {
       description:
         "Transliterate is an all-in-one web application which can transliterate text, audio and even video between 106 available languages. It is various google APIs to perform the task.",
       techStack: ["Flask", "Google APIs", "HTML5", "CSS3", "Bootstrap"],
-      images: ["/projects/transliterate/tr1.png", "/projects/blogx/blogx3.png",],
-    }, 
+      images: ["/projects/transliterate/tr1.png", "/projects/blogx/blogx3.png"],
+    },
     {
-        key: 5,
-        name: 'Voice Assistant',
-        repo: 'https://github.com/SohamRatnaparkhi/Voice-Assistant',
-        hostedLink: 'https://github.com/SohamRatnaparkhi/Voice-Assistant/releases/download/v1.0.0/VoiceAssistant.exe',
-        description: 'A CLI Voice Assistant tool which can perform various common tasks like opening websites, playing music, sending emails, etc. The USP of this project is that it can be used as a book reader as it can convert the text in .pdf and .docs files to audio and play it page by page.',
-        techStack: ["Python", "gTTS"],
-        images:["/projects/va/va1.png", "/experience.svg"]
-    }
+      key: 5,
+      name: "Voice Assistant",
+      repo: "https://github.com/SohamRatnaparkhi/Voice-Assistant",
+      hostedLink:
+        "https://github.com/SohamRatnaparkhi/Voice-Assistant/releases/download/v1.0.0/VoiceAssistant.exe",
+      description:
+        "A CLI Voice Assistant tool which can perform various common tasks like opening websites, playing music, sending emails, etc. The USP of this project is that it can be used as a book reader as it can convert the text in .pdf and .docs files to audio and play it page by page.",
+      techStack: ["Python", "gTTS"],
+      images: ["/projects/va/va1.png", "/experience.svg"],
+    },
   ],
   conclusion: {
     title: "Want to see more?",
@@ -127,80 +123,81 @@ export const SKILLS = {
   title: "Skills",
   skills: [
     {
-      'name': 'HTML',
-      'image': '/skills/icons/html.svg'
+      name: "HTML",
+      image: "/skills/icons/html.svg",
     },
     {
-      'name': 'CSS',
-      'image': '/skills/icons/css3.svg'
+      name: "CSS",
+      image: "/skills/icons/css3.svg",
     },
     {
-      'name': 'Bootstrap',
-      'image': '/skills/icons/bootstrap.svg'
+      name: "Bootstrap",
+      image: "/skills/icons/bootstrap.svg",
     },
     {
-      'name': 'TailwindCSS',
-      'image': '/skills/icons/tailwind.svg'
+      name: "TailwindCSS",
+      image: "/skills/icons/tailwind.svg",
     },
     {
-      'name': 'JavaScript',
-      'image': '/skills/icons/js.svg'
+      name: "JavaScript",
+      image: "/skills/icons/js.svg",
     },
     {
-      'name': 'TypeScript',
-      'image': '/skills/icons/ts.svg'
+      name: "TypeScript",
+      image: "/skills/icons/ts.svg",
     },
     {
-      'name': 'React.JS',
-      'image': '/skills/icons/reactjs.svg'
+      name: "Next.JS",
+      image: "/skills/icons/nextjs.svg",
     },
     {
-      'name': 'Node.JS',
-      'image': '/skills/icons/nodejs.svg'
+      name: "React.JS",
+      image: "/skills/icons/reactjs.svg",
     },
     {
-      'name': 'Express.JS',
-      'image': '/skills/icons/express.svg'
+      name: "Node.JS",
+      image: "/skills/icons/nodejs.svg",
     },
     {
-      'name': 'MongoDB',
-      'image': '/skills/icons/mongodb.svg'
+      name: "Express.JS",
+      image: "/skills/icons/express.svg",
     },
     {
-      'name': 'Python',
-      'image': '/skills/icons/python.svg'
+      name: "MongoDB",
+      image: "/skills/icons/mongodb.svg",
     },
     {
-      'name': 'Django',
-      'image': '/skills/icons/django.svg'
+      name: "Python",
+      image: "/skills/icons/python.svg",
     },
     {
-      'name': 'Tensorflow',
-      'image': '/skills/icons/tensorflow.svg'
+      name: "Django",
+      image: "/skills/icons/django.svg",
     },
     {
-      'name': 'Next.JS',
-      'image': '/skills/icons/nextjs.svg'
+      name: "Tensorflow",
+      image: "/skills/icons/tensorflow.svg",
     },
     {
-      'name': 'Git',
-      'image': '/skills/icons/git.svg'
+      name: "Docker",
+      image: "/skills/icons/docker.svg",
     },
     {
-      'name': 'Docker',
-      'image': '/skills/icons/docker.svg'
+      name: "Java",
+      image: "/skills/icons/java.svg",
     },
     {
-      'name': 'Java',
-      'image': '/skills/icons/java.svg'
+      name: "C++",
+      image: "/skills/icons/cplusplus.svg",
     },
     {
-      'name': 'C++',
-      'image': '/skills/icons/cplusplus.svg'
+      name: "C",
+      image: "/skills/icons/c.svg",
     },
+
     {
-      'name': 'C',
-      'image': '/skills/icons/c.svg'
+      name: "Git",
+      image: "/skills/icons/git.svg",
     },
-  ]
-}
+  ],
+};

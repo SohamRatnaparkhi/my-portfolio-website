@@ -4,7 +4,6 @@ import { SHORT_NAME } from "../constants/personal.data";
 import { THEME_MENU, THEMES } from "../constants/web.data";
 import { MENU } from "../constants/web.data";
 import { useState, useEffect } from "react";
-import { themeChange } from "theme-change";
 import { Sacramento } from "@next/font/google";
 import { MouseContext } from "../context/mouse-context";
 
