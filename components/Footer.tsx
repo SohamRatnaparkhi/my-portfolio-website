@@ -11,18 +11,18 @@ const Footer = () => {
     <>
       <div className="px-0 py-0 mx-0 my-0 antialiased text-center bg-[#1f2937]">
         <div className="flex flex-col pt-3 md:items-center f-f-l">
-          <h1 className="text-4xl font-black text-neutral-content">
+          <h1 className="text-2xl sm:text-4xl font-black text-neutral-content">
             Soham Ratnaparkhi
           </h1>
           <div className="my-3 text-base text-center text-neutral-content ">
-            <div className="items-center md:flex">
+            <div className="items-center md:flex flex-wrap w-screen justify-center">
               {MENU.map(({ key, title, link }) => (
                 <Link
                   key={key}
                   href={link}
                   onMouseEnter={() => cursorChangeHandler("hovered", "")}
                   onMouseLeave={() => cursorChangeHandler("", "")}
-                  className="p-2 mx-2 my-4 text-base font-bold text-neutral-content rounded-md hover:text-neutral-content hover:bg-primary-500"
+                  className="sm:p-2 p-0 mx-2 my-4 sm:mx-0 text-base font-bold text-neutral-content rounded-md hover:text-neutral-content hover:bg-primary-500"
                 >
                   {title}
                 </Link>
