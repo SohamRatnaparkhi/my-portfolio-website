@@ -27,7 +27,7 @@ const Projects = () => {
           width={1920}
           height={200}
           alt="soham"
-          className="overflow-hidden wave"
+          className="overflow-hidden wave w-screen"
         />
       <h1 className="my-8 text-4xl md:text-6xl font-bold text-center">
         {title}
@@ -46,7 +46,7 @@ const Projects = () => {
           />
         </div>
       </div>
-      <div className="flex items-center justify-center relative w-screen overflow-hidden flex-wrap  mx-auto items-center flex-col md:flex-row ">
+      <div className="flex items-center justify-center relative w-screen overflow-hidden flex-wrap  mx-auto flex-col md:flex-row ">
         {data.map((project) => {
           return <Card {...project} />;
         })}

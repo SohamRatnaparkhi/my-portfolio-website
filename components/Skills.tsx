@@ -9,14 +9,16 @@ const Skills = () => {
       <Image
         src="/skills/orangeb-cropped.svg"
         width={1920}
-        height={100}
+        height={60}
         alt=""
+        className="w-screen"
       />
       <Image
         src="/skills/oranget-cropped.svg"
         width={1920}
-        height={100}
+        height={60}
         alt=""
+        className="w-screen"
       />
       <h1 className="my-8 text-4xl md:text-6xl font-bold text-center">
         {title}
@@ -52,7 +54,7 @@ const Skills = () => {
       </div>
       <Image
         src="/skills/orangeb-cropped.svg"
-        className="skills"
+        className="skills w-screen"
         width={1920}
         height={100}
         alt=""

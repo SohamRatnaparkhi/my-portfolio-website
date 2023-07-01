@@ -14,7 +14,15 @@ export const INTRO_TEXT = "a programmer!";
 export const KNOW_MORE = {
   title: "Know more about me!",
   data:
-    "I'm a software developer who loves to build things! I regularly keep my self updated to the latest technologies and other techy stuff arising.  I am a full-stack responsive web developer (MERN stack). Along with web development, I have worked on various projects related to Deep Learning and Machine Learning. I love contributing to open-source projects. I am adept at solving crunch problems based on data structure and algorithms.",
+    `I'm Soham Ratnaparkhi, a Full-stack Developer passionate about Web3 technologies and open source. With expertise in Java, Python, GoLang, TypeScript, JavaScript, and HTML/CSS, I create robust and scalable backend solutions.
+
+I'm an enthusiastic learner of DevOps principles, utilizing tools like Git, Docker, and Kubernetes for efficient deployments. As a tech writer, I share knowledge and insights with the community, aiming to inspire and educate fellow developers.
+
+I build high-performance web applications using frameworks like Next.js, React.js, Node.js, and TensorFlow. I work with databases such as MongoDB, MySQL, and PostgreSQL to design data-driven solutions.
+
+Currently at LitmusChaos, I contribute to cutting-edge projects, embracing innovation. I thrive in collaborative environments that encourage experimentation and continuous improvement.
+
+If you're seeking a dedicated developer who loves challenges and pushing technology boundaries, let's connect and explore opportunities to collaborate on innovative solutions.`,
   photoWithBG: (
     <Image
       src={photoWithBG}
