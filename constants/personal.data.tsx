@@ -52,6 +52,17 @@ export const PROJECTS = {
       ]
     },
     {
+      key: -2,
+      name: "Blogging Platform microservice",
+      repo: "https://github.com/SohamRatnaparkhi/blogx-backend-go",
+      hostedLink: "",
+      description: "Microservice based backend for a blogging platform. It has 4 services - authentication, blog, feed, and user. Swagger UI for these services is available as well.",
+      techStack: ["GoLang", "PostgreSQL", "Docker", "Kubernetes", "HAProxy"],
+      images: [
+        "/projects/ms/ms1.png",
+      ]
+    },
+    {
       key: 0,
       name: "Soham's Portfolio",
       repo: "https://github.com/SohamRatnaparkhi/my-portfolio-website",
