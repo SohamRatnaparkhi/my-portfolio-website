@@ -41,6 +41,17 @@ export const PROJECTS = {
   projectImage: "/projects/project.png",
   data: [
     {
+      key: -1,
+      name: "LitmusChaos",
+      repo: "https://github.com/litmuschaos/litmus/issues?q=author%3A%40me+sort%3Aupdated-desc+",
+      hostedLink: "https://mentorship.lfx.linuxfoundation.org/project/983193ea-9cca-405f-baa5-e6ade4df1ba2",
+      description: "LitmusChaos is a CNCF sandbox project which aims to build a chaos engineering ecosystem for cloud native applications. I am currently working on the project as a mentee under the Linux Foundation Mentorship Program.",
+      techStack: ["GoLang", "Kubernetes", "Docker"],
+      images: [
+        "/projects/litmus/litmus1.png",
+      ]
+    },
+    {
       key: 0,
       name: "Soham's Portfolio",
       repo: "https://github.com/SohamRatnaparkhi/my-portfolio-website",

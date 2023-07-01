@@ -14,7 +14,7 @@ export const MENU = [
   { key: 1, title: NAVBAR_TITLES[0], link: "/" },
   { key: 2, title: NAVBAR_TITLES[1], link: "#projects" },
   { key: 3, title: NAVBAR_TITLES[2], link: "#skills" },
-  { key: 4, title: NAVBAR_TITLES[3], link: "https://drive.google.com/file/d/1vIky2PfUZKZYlUxHe4WQBovFoEpjIcwY/view" },
+  { key: 4, title: NAVBAR_TITLES[3], link: "https://drive.google.com/file/d/1kJJGxcVxiBui8UUdzIn0QB2xGpmroKSV/view?usp=sharing" },
   { key: 5, title: NAVBAR_TITLES[4], link: "https://linkfree.eddiehub.io/SohamRatnaparkhi" },
 ];
 
