@@ -10,7 +10,7 @@ const Card = (props: {
   hostedLink: string;
   description: string;
   techStack: string[];
-  images: string[];
+  images: string[] | undefined;
 }) => {
   const { key, name, repo, hostedLink, description, techStack, images } = props;
   const { cursorChangeHandler } = React.useContext(MouseContext);
@@ -31,7 +31,7 @@ const Card = (props: {
             data-bs-ride="carousel"
             className="carousel slide relative w-full"
           >
-            {images.map((image, index) => {
+            {images?.map((image, index) => {
               return (
                 <div
                   key={index}
@@ -50,7 +50,7 @@ const Card = (props: {
             })}
           </div>
           <div className="flex justify-center w-full py-2 gap-2">
-            {images.map((image, index) => {
+            {images?.map((image, index) => {
               return (
                 <a
                   key={index}

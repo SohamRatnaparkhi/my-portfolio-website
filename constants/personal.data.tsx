@@ -33,6 +33,18 @@ export const PROJECTS = {
   projectImage: "/projects/project.png",
   data: [
     {
+      key: 0,
+      name: "Soham's Portfolio",
+      repo: "https://github.com/SohamRatnaparkhi/my-portfolio-website",
+      hostedLink: "https://soham-r-portfolio-website.vercel.app/",
+      description: "My portfolio website built to showcase my skills and projects.",
+      techStack: ["Next.JS", "TailwindCSS", "Typescript"],
+      images: [
+        "/projects/portfolio/portfolio-1.png",
+        "/projects/portfolio/portfolio-2.png",
+      ]
+    },
+    {
       key: 1,
       name: "Blog-X",
       repo: "https://github.com/Blog-X/blog_x",
@@ -123,21 +135,23 @@ export const SKILLS = {
   title: "Skills",
   skills: [
     {
-      name: "HTML",
-      image: "/skills/icons/html.svg",
+      name: "GoLang",
+      image: "/skills/icons/golang.svg",
     },
     {
-      name: "CSS",
-      image: "/skills/icons/css3.svg",
+      name: "Docker",
+      image: "/skills/icons/docker.svg",
     },
     {
-      name: "Bootstrap",
-      image: "/skills/icons/bootstrap.svg",
+      name: "Kubernetes",
+      image: "/skills/icons/kubernetes.svg",
     },
-    {
-      name: "TailwindCSS",
-      image: "/skills/icons/tailwind.svg",
-    },
+    
+    // {
+    //   name: "Bootstrap",
+    //   image: "/skills/icons/bootstrap.svg",
+    // },
+    
     {
       name: "JavaScript",
       image: "/skills/icons/js.svg",
@@ -167,6 +181,26 @@ export const SKILLS = {
       image: "/skills/icons/mongodb.svg",
     },
     {
+      name: "MySQL",
+      image: "/skills/icons/mysql.svg",  
+    },
+    {
+      name: "PostgreSQL",
+      image: "/skills/icons/postgresql.svg",
+    },
+    {
+      name: "HTML",
+      image: "/skills/icons/html.svg",
+    },
+    {
+      name: "CSS",
+      image: "/skills/icons/css3.svg",
+    },
+    {
+      name: "TailwindCSS",
+      image: "/skills/icons/tailwind.svg",
+    },
+    {
       name: "Python",
       image: "/skills/icons/python.svg",
     },
@@ -177,10 +211,6 @@ export const SKILLS = {
     {
       name: "Tensorflow",
       image: "/skills/icons/tensorflow.svg",
-    },
-    {
-      name: "Docker",
-      image: "/skills/icons/docker.svg",
     },
     {
       name: "Java",
@@ -194,7 +224,6 @@ export const SKILLS = {
       name: "C",
       image: "/skills/icons/c.svg",
     },
-
     {
       name: "Git",
       image: "/skills/icons/git.svg",

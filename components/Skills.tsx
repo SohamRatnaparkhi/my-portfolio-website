@@ -32,15 +32,15 @@ const Skills = () => {
           />
         </div> */}
         <div>
-          <div className="flex items-center justify-center relative w-full md:w-1/2 overflow-hidden flex-wrap  mx-auto items-center flex-row ">
+          <div className="flex justify-center relative w-full md:w-1/2 overflow-hidden flex-wrap  mx-auto items-center flex-row ">
             {skills.map((skill) => {
               return (
                 <div className="flex p-2 m-2 sm:m-4 flex-col items-center justify-center ">
                   <Image
                     className="mx-auto relative z-10"
                     src={skill.image}
-                    width={100}
-                    height={100}
+                    width={65}
+                    height={65}
                     alt=''
                   />
                   <p className="text-center text-sm">{skill.name}</p>
